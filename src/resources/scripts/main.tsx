@@ -1,13 +1,24 @@
 // Build something cool. <3
 import React from "react";
-import * as ReactDOM from 'react-dom';
+import { createRoot } from "react-dom/client";
 
-function App() {
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Hoge } from "./components/atoms/Hoge";
+import { Fuga } from "./components/atoms/Fuga";
+
+const RouterConfig = (): JSX.Element => {
     return (
-        <div>
-            Hello
-        </div>
-    )
-}
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Hoge />} />
+                    <Route path="/fuga" element={<Fuga />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
+};
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const container: any = document.getElementById("app");
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<RouterConfig />);

@@ -23,7 +23,7 @@ return [
             ],
             'dev_server' => [
                 'enabled' => true,
-                'url' => env('DEV_SERVER_URL', 'http://localhost:5173'),
+                'url' => env('DEV_SERVER_URL', 'http://localhost:3000'),
                 'ping_before_using_manifest' => true,
                 'ping_url' => null,
                 'ping_timeout' => 1,
@@ -44,7 +44,7 @@ return [
     | https://laravel-vite.dev/configuration/laravel-package.html#aliases
     */
     'aliases' => [
-        '@' => 'resources',
+        '@' => 'resources/scripts',
     ],
 
     /*
