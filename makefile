@@ -1,10 +1,11 @@
 up:
 	docker-compose up -d
-start: 
+start:
 	docker-compose start
 stop:
 	docker-compose stop
-
+down:
+	docker-compose down
 inspect:
 	docker ps
 
@@ -14,4 +15,4 @@ exec:
 # password: root
 
 phpmyadmin:
-	open http://localhost:8081
+	open http://localhost:8001
