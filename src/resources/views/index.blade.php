@@ -16,7 +16,8 @@
         <!-- Scripts and CSS import -->
         @vite
     </head>
+    <?php $data = ['exampleA'=>'Hello', 'exampleB'=>'World']; ?>
     <body class="antialiased">
-        <div id="app"></div>
+        <div id="app" data-props="{{ json_encode($data) }}"></div>
     </body>
 </html>
